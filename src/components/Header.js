@@ -1,23 +1,25 @@
-import React from 'react';
+import React from "react";
 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-import { routes } from '../config/Router';
+import { routes } from "../config/Router";
 
-import '../styles/Header.css';
+import "../styles/Header.css";
 
 const Header = () => {
   return (
     <header>
       <nav>
-        <div className='logo'>MovieApp</div>
-        <div className='nav-item'>
-          <div className='nav-links'>
-            {routes.map((route) => {
+        <Link to="/">
+          <div className="logo">MovieApp</div>
+        </Link>
+        <div className="nav-item">
+          <div className="nav-links">
+            {routes.map(route => {
               if (route.isHeaderElement) {
                 return (
                   <li key={route.title}>
-                    <Link to={route.path} className='link'>
+                    <Link to={route.path} className="link">
                       {route.title}
                     </Link>
                   </li>

@@ -17,4 +17,11 @@ export const routes = [
     title: 'Detail',
     isHeaderElement: false,
   },
+  {
+    path: '/favourites',
+    exact: false,
+    component: <Favorite/>,
+    title: 'Favourite',
+    isHeaderElement : true
+  }
 ];
